@@ -1,0 +1,547 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getArray"
+			],
+			[
+				"ge",
+				"getNumber"
+			],
+			[
+				"J",
+				"JValue"
+			],
+			[
+				"JN",
+				"JNull"
+			],
+			[
+				"ins",
+				"insertToTree"
+			],
+			[
+				"in",
+				"insertToTree"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"min",
+				"minm"
+			],
+			[
+				"cu",
+				"curPSet"
+			],
+			[
+				"odd",
+				"oddSq"
+			],
+			[
+				"od",
+				"oddSq"
+			],
+			[
+				"fil",
+				"filterQsort"
+			],
+			[
+				"max",
+				"maxel"
+			],
+			[
+				"ma",
+				"maxin"
+			],
+			[
+				"two",
+				"twoc"
+			],
+			[
+				"on",
+				"onec"
+			],
+			[
+				"be",
+				"beginend\t$1.begin(), $1.end()"
+			],
+			[
+				"str",
+				"string"
+			],
+			[
+				"se",
+				"seqSz"
+			],
+			[
+				"ne",
+				"needi"
+			],
+			[
+				"ha",
+				"havei"
+			],
+			[
+				"a",
+				"ans"
+			],
+			[
+				"end",
+				"endl"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"beg",
+				"begin"
+			],
+			[
+				"int",
+				"inters"
+			],
+			[
+				"full",
+				"fullal"
+			],
+			[
+				"repo",
+				"reposter"
+			],
+			[
+				"p",
+				"pf"
+			],
+			[
+				"e",
+				"endl"
+			],
+			[
+				"en",
+				"endl"
+			],
+			[
+				"h",
+				"high"
+			],
+			[
+				"su",
+				"sumchain"
+			],
+			[
+				"sum",
+				"sumfoot"
+			],
+			[
+				"fo",
+				"foot"
+			],
+			[
+				"foo",
+				"foot"
+			],
+			[
+				"cha",
+				"chain"
+			],
+			[
+				"N",
+				"Nao"
+			],
+			[
+				"n",
+				"n-1"
+			],
+			[
+				"chec",
+				"check_rows"
+			],
+			[
+				"sr",
+				"string"
+			],
+			[
+				"check",
+				"check_columns"
+			],
+			[
+				"pl",
+				"PlusOneFriends"
+			],
+			[
+				"one",
+				"onesum"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/mirzaiev/me/haskell/hammer/realWorldHaskell/SimpleJson/SimpleJson.hs",
+			"settings":
+			{
+				"buffer_size": 742,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 32.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"git",
+				"Git: Blame"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ve",
+				"Snippet: std::vector"
+			],
+			[
+				"so",
+				"Sort Lines"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			]
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/mirzaiev/me/codeforces/plan.txt",
+		"/home/mirzaiev/me/notes.txt",
+		"/home/mirzaiev/.config/sublime-text-3/Packages/User/input.sublime-build",
+		"/home/mirzaiev/me/codeforces/code.cpp",
+		"/home/mirzaiev/me/codeforces/input",
+		"/home/mirzaiev/me/haskell/SimpleJson.hs",
+		"/home/mirzaiev/me/haskell/game.hs",
+		"/home/mirzaiev/me/g4g/face_detection.py",
+		"/home/mirzaiev/me/g4g/instruction.txt",
+		"/home/mirzaiev/nokia/nts/NTS/src/scenario/type/MRBTSChange.cpp",
+		"/tmp/test.py",
+		"/home/mirzaiev/nokia/lts/src/CMakeLists.txt",
+		"/home/mirzaiev/nokia/lts/test/sct/testcases/rrom/CellAttachDetachCran.ttcn3",
+		"/tmp/2.txt",
+		"/tmp/1.txt",
+		"/home/mirzaiev/cur_tests.txt",
+		"/home/mirzaiev/file.text"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"String",
+			"]);\n",
+			"s[",
+			"filterQsort",
+			"int",
+			"};\n",
+			"heavy",
+			";\n",
+			"heavy",
+			" ",
+			"int",
+			" ",
+			";\n",
+			"?",
+			"inters",
+			";\n",
+			"foo",
+			"ssh",
+			"ssh ",
+			"\";\n",
+			"reposter",
+			"img",
+			"current_frame",
+			"a",
+			"MOD",
+			"];\n",
+			"<=",
+			"];\n",
+			"arr",
+			"\t\n",
+			";\n",
+			"long",
+			"int",
+			"}",
+			"]++;\n",
+			"mar",
+			"pref",
+			"min",
+			"];\n",
+			"x",
+			"int",
+			"2",
+			"x",
+			"int",
+			"print",
+			"189",
+			"scp ",
+			".*cplane\\.([a-zA-z]*)\\\\x.*",
+			".*cplane./([a-zA-z]*)\\\\x.*",
+			" \\n?\\n+type.googleapis.com/cplane.ConfigurationReq\\x12\\x10\\n\\t127.0.0.1\\x12\\x031.0",
+			".*cplane./([a-zA-z]*)\\\\x.*",
+			" \\n?\\n+type.googleapis.com/cplane.ConfigurationReq\\x12\\x10\\n\\t127.0.0.1\\x12\\x031.0",
+			".*cplane./([a-zA-z]*)\\\\x.*",
+			".*.com/([\\.a-zA-z]*)\\\\x.*",
+			"int",
+			"];\n",
+			"('.*'), (\\d)",
+			"'.*', \\d",
+			"'^', 0",
+			"('.*'), (\\d)",
+			"int",
+			"int ",
+			"++;\n",
+			"n",
+			"int",
+			");\n",
+			",",
+			"int ",
+			".*\\/.*\\/",
+			"\\.\\..*",
+			".*\\/.*\\/",
+			"\\t.*",
+			"\\n\\n",
+			"\\n\\n\\n",
+			" ",
+			".*\\d\\d:\\d\\d",
+			"\\.\\..*",
+			".*\\/.*\\/",
+			":  .*",
+			".*\\/.*\\/",
+			"+",
+			" "
+		],
+		"highlight": true,
+		"in_selection": true,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Object",
+			"Array",
+			"Bool",
+			"Number",
+			"a[",
+			"qsort",
+			"ll",
+			"metal",
+			", ",
+			"ll",
+			"\\n",
+			"diff",
+			"origin",
+			"image",
+			"camera",
+			"sum",
+			"<",
+			"sum",
+			"long long",
+			"long",
+			"v",
+			"suf",
+			"max",
+			"y",
+			"double",
+			"1",
+			"y",
+			"ll",
+			"pp",
+			"\\1",
+			"ll",
+			"\\2, \\1",
+			"ll",
+			">>",
+			"ll ",
+			"",
+			"\\n",
+			"",
+			"\\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/mirzaiev/me/haskell/hammer/realWorldHaskell/SimpleJson/SimpleJson.hs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 742,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								78,
+								78
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Haskell/Haskell.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 253.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/input.sublime-build",
+	"project": "simpleJson.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 52.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 245.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

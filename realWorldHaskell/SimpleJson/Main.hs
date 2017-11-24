@@ -1,5 +1,8 @@
 module Main (main) where
 
     import SimpleJson
+    import PutJson
 
-    main = print (JObject[("name", JString "Jake the Dog"), ("age", JNumber 34)])
+    main = do
+        putStrLn ( renderValue (JObject [("name", JString "Jake the Dog"), ("age", JNumber 34)]))
+

@@ -1,8 +1,8 @@
 module Main (main) where
 
     import SimpleJson
-    import PutJson
+    import PrettyJson
 
     main = do
-        putStrLn ( renderValue (JObject [("name", JString "Jake the Dog"), ("age", JNumber 34)]))
+        putStrLn ( renderJValue (JObject [("name", JString "Jake the Dog"), ("age", JNumber 34)]))
 

@@ -15,13 +15,13 @@ spec =  do
     it "Empty <> a should return a" $
       empty <> string "Hello" `shouldBe` string "Hello"
 
-    it "First and last chars of result of enclose should match initial arguments" $
-      -- resultString `shouldStartWith` left:[]
-        where
-          resultString = show (enclose left right racistStuff)
-          left = '¿'
-          right = '?'
-          racistStuff = text "Amigo"
+    -- it "First and last chars of result of enclose should match initial arguments" $
+    --   -- resultString `shouldStartWith` left:[]
+    --     where
+    --       resultString = show (enclose left right racistStuff)
+    --       left = '¿'
+    --       right = '?'
+    --       racistStuff = text "Amigo"
 
     -- it "String shoud be converted to Doc with quotes" $
     --   string "Hello" `shouldBe` Doc String "\"Hello\""

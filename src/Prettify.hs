@@ -1,6 +1,18 @@
+{- |
+Module      :  $Header$
+Description :  Pretty printing JSON data
+License     :  GPL v. 3
+
+Maintainer  :  asalle.kim@gmail.com
+Stability   :  unstable
+Portability :  portable
+-}
+
 module Prettify
     (
         Doc
+      , pretty
+      , compact
       , string
       , text
       , double
@@ -9,9 +21,9 @@ module Prettify
       , enclose
       , fsep
       , punctuate
+      , empty
     )
     where
-
         import SimpleJson
         import Numeric (showHex)
         import Data.Char (ord)
@@ -25,22 +37,61 @@ module Prettify
                 | Union Doc Doc
             deriving (Show, Eq)
 
+        pretty width x = best 0 [x]
+            where best col (d:ds) =
+                      case d of
+                        Empty        -> best col ds
+                        Char c       -> c :  best (col + 1) ds
+                        Text s       -> s ++ best (col + length s) ds
+                        Line         -> '\n' : best 0 ds
+                        a `Concat` b -> best col (a:b:ds)
+                        a `Union` b  -> nicest col (best col (a:ds))
+                                                   (best col (b:ds))
+                  best _ _ = ""
+
+                  nicest col a b | (width - least) `fits` a = a
+                                 | otherwise                = b
+                                 where least = min width col
+
+        compact :: Doc -> String
+        compact x = transform [x]
+            where transform [] = ""
+                  transform (x:xs) =
+                    case x of
+                        Empty -> transform xs
+                        Char c -> c : transform xs
+                        Text s -> s ++ transform xs
+                        Line   -> '\n' : transform xs
+                        a `Concat` b -> transform (a:b:xs)
+                        _ `Union` b -> transform (b:xs)
+
+        fits :: Int -> String -> Bool
+        w `fits` _ | w < 0 = False
+        w `fits` ""        = True
+        w `fits` ('\n':_)  = True
+        w `fits` (c:cs)    = (w - 1) `fits` cs
+
+        -- | 'string' pretty prints a string adding quotes
         string :: String -> Doc
         string = enclose '"' '"' . hcat . map oneChar
 
+        -- | 'text' pretty prints a string with no quotes
         text :: String -> Doc
         text "" = Empty
         text str = Text str
 
+        -- | 'double' converts a number to Doc
         double :: Double -> Doc
         double num = text $ show num
 
         line :: Doc
         line = Line
 
+        -- | 'enclose' left right doc encloses the Doc with left and right
         enclose :: Char -> Char -> Doc -> Doc
         enclose left right d = char left <> d <> char right
 
+        -- | Doc concatenation
         (<>) :: Doc -> Doc -> Doc
         a <> Empty = a
         Empty <> b = b
@@ -55,8 +106,9 @@ module Prettify
         hcat :: [Doc] -> Doc
         hcat = fold (<>)
 
+        -- | Make a Doc out of Char
         char :: Char -> Doc
-        char c = Char c
+        char = Char
 
         oneChar :: Char -> Doc
         oneChar c = case lookup c simpleEscapes of
@@ -88,6 +140,7 @@ module Prettify
         empty :: Doc
         empty = Empty
 
+        -- | fold with softline
         fsep :: [Doc] -> Doc
         fsep = fold (</>)
 
@@ -106,6 +159,7 @@ module Prettify
         flatten (x `Union` _)  = flatten x
         flatten other          = other
 
+        -- | intercalate a list with punctuation or whatever
         punctuate :: Doc -> [Doc] -> [Doc]
         punctuate _ [] = []
         punctuate _ [a] = [a]

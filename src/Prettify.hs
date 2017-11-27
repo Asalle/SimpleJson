@@ -19,6 +19,7 @@ module Prettify
       , enclose
       , fsep
       , punctuate
+      , empty
     )
     where
         import SimpleJson

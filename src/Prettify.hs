@@ -56,7 +56,7 @@ module Prettify
         hcat = fold (<>)
 
         char :: Char -> Doc
-        char c = Char c
+        char = Char
 
         oneChar :: Char -> Doc
         oneChar c = case lookup c simpleEscapes of

@@ -1,3 +1,13 @@
+{- |
+Module      :  $Header$
+Description :  Pretty printing JSON data
+License     :  GPL v. 3
+
+Maintainer  :  asalle.kim@gmail.com
+Stability   :  unstable
+Portability :  portable
+-}
+
 module Prettify
     (
         Doc
@@ -11,7 +21,6 @@ module Prettify
       , punctuate
     )
     where
-
         import SimpleJson
         import Numeric (showHex)
         import Data.Char (ord)
@@ -25,22 +34,27 @@ module Prettify
                 | Union Doc Doc
             deriving (Show, Eq)
 
+        -- | 'string' pretty prints a string adding quotes
         string :: String -> Doc
         string = enclose '"' '"' . hcat . map oneChar
 
+        -- | 'text' pretty prints a string with no quotes
         text :: String -> Doc
         text "" = Empty
         text str = Text str
 
+        -- | 'double' converts a number to Doc
         double :: Double -> Doc
         double num = text $ show num
 
         line :: Doc
         line = Line
 
+        -- | 'enclose' left right doc encloses the Doc with left and right
         enclose :: Char -> Char -> Doc -> Doc
         enclose left right d = char left <> d <> char right
 
+        -- | Doc concatenation
         (<>) :: Doc -> Doc -> Doc
         a <> Empty = a
         Empty <> b = b
@@ -55,6 +69,7 @@ module Prettify
         hcat :: [Doc] -> Doc
         hcat = fold (<>)
 
+        -- | Make a Doc out of Char
         char :: Char -> Doc
         char = Char
 
@@ -88,6 +103,7 @@ module Prettify
         empty :: Doc
         empty = Empty
 
+        -- | fold with softline
         fsep :: [Doc] -> Doc
         fsep = fold (</>)
 
@@ -106,6 +122,7 @@ module Prettify
         flatten (x `Union` _)  = flatten x
         flatten other          = other
 
+        -- | intercalate a list with punctuation or whatever
         punctuate :: Doc -> [Doc] -> [Doc]
         punctuate _ [] = []
         punctuate _ [a] = [a]
